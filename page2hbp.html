@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HotelEase AI – Prediction Form</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #fff, #e0f7fa);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #0d47a1;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #0d47a1;
+      color: white;
+      padding: 14px 28px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1565c0;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #0d47a1;
+      font-size: 0.9rem;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Booking Details</h2>
+    <form action="page3hbp.html" method="GET">
+      <label for="lead_time">Lead Time (in days)</label>
+      <input type="number" id="lead_time" name="lead_time" placeholder="E.g. 45" required>
+
+      <label for="weekend_nights">Weekend Nights</label>
+      <input type="number" id="weekend_nights" name="weekend_nights" placeholder="E.g. 2" required>
+
+      <label for="adults">Number of Adults</label>
+      <input type="number" id="adults" name="adults" placeholder="E.g. 2" required>
+
+      <label for="children">Number of Children</label>
+      <select id="children" name="children" required>
+        <option value="" disabled selected>Select</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3+">3+</option>
+      </select>
+
+      <!-- ✅ Fixed submit button -->
+      <button type="submit" class="btn">Predict</button>
+    </form>
+
+    <a href="page1hbp.html" class="back-link">← Back to Home</a>
+  </div>
+
+</body>
+</html>
