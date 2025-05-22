@@ -1,2 +1,0 @@
-# HBP
-hotel booking prediction
